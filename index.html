@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Варіант 6</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f5f2;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Стиль для кожної секції (Фото + Текст) */
+        .menu-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Ділимо на дві колонки */
+            gap: 30px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        /* Міняємо місцями фото і текст для кожної другої секції (для стилю) */
+        .menu-section:nth-child(even) {
+            direction: rtl; /* Текст буде справа, фото зліва */
+        }
+        .menu-section:nth-child(even) .menu-list {
+            direction: ltr; /* Повертаємо текст у нормальний напрямок */
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .menu-list h2 {
+            font-size: 22px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 4px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>RESTAURANT / MENU</h1>
+        </header>
+
+        <div class="menu-section">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500" alt="Breakfast">
+            </div>
+            <div class="menu-list">
+                <h2>BREAKFAST</h2>
+                <div class="item"><span>Eggs Benedict</span> <span class="price">$4.99</span></div>
+                <div class="item"><span>Waffle Fresh Berries</span> <span class="price">$3.99</span></div>
+                <div class="item"><span>Poridge With Cherries</span> <span class="price">$6.99</span></div>
+                <div class="item"><span>Poached Egg Sandwiches</span> <span class="price">$5.99</span></div>
+                <div class="item"><span>Banana and Blackberry Toast</span> <span class="price">$4.99</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500" alt="Main">
+            </div>
+            <div class="menu-list">
+                <h2>MAIN</h2>
+                <div class="item"><span>Lasagna</span> <span class="price">$4.99</span></div>
+                <div class="item"><span>Beef Stew</span> <span class="price">$3.99</span></div>
+                <div class="item"><span>Salmon Steak</span> <span class="price">$6.99</span></div>
+                <div class="item"><span>Spaghetti</span> <span class="price">$5.99</span></div>
+                <div class="item"><span>Green Pea Soup</span> <span class="price">$4.99</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Salads">
+            </div>
+            <div class="menu-list">
+                <h2>SALADS</h2>
+                <div class="item"><span>Poke Salad</span> <span class="price">$4.99</span></div>
+                <div class="item"><span>Salmon Salad</span> <span class="price">$3.99</span></div>
+                <div class="item"><span>Diet Salad</span> <span class="price">$6.99</span></div>
+                <div class="item"><span>Avocado Tuna Salad</span> <span class="price">$5.99</span></div>
+                <div class="item"><span>Organic Ham Salad</span> <span class="price">$4.99</span></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>www.companyname.com</p>
+        </footer>
+    </div>
+
+</body>
+</html>
